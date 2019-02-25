@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    margin: 20px;
+}
+
+.tile {
+    background-color: #2e5e1e;
+    border: 2px solid black;
+    width: 80px;
+    height: 80px;
+}
+
+.row {
+    width: 84px;
+    display: inline-block;
+}
+
+.player {
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    border-radius: 38px;
+    width: 80px;
+    height: 80px;
+    border: 0 !important;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.status {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.hidden {
+    visibility: hidden;
+}

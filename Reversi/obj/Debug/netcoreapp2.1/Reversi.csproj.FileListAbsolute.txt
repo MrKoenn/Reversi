@@ -1,0 +1,14 @@
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Reversi.deps.json
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Reversi.runtimeconfig.json
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Reversi.runtimeconfig.dev.json
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Reversi.dll
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Reversi.pdb
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.csprojAssemblyReference.cache
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.csproj.CoreCompileInputs.cache
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.AssemblyInfoInputs.cache
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.AssemblyInfo.cs
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.dll
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.pdb
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+X:\Projects\Reversi\Reversi\Reversi\bin\Debug\netcoreapp2.1\Newtonsoft.Json.xml
+X:\Projects\Reversi\Reversi\Reversi\obj\Debug\netcoreapp2.1\Reversi.csproj.CopyComplete

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reversi", "Reversi\Reversi.csproj", "{C344CF46-3004-46A6-93CD-4D8C2671A8DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{F61D4FD4-77E1-449B-8C93-BAD97C62BAA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C344CF46-3004-46A6-93CD-4D8C2671A8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C344CF46-3004-46A6-93CD-4D8C2671A8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C344CF46-3004-46A6-93CD-4D8C2671A8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C344CF46-3004-46A6-93CD-4D8C2671A8DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61D4FD4-77E1-449B-8C93-BAD97C62BAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61D4FD4-77E1-449B-8C93-BAD97C62BAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61D4FD4-77E1-449B-8C93-BAD97C62BAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61D4FD4-77E1-449B-8C93-BAD97C62BAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F712A0B-100B-4282-9F03-B3C883A134EF}
+	EndGlobalSection
+EndGlobal

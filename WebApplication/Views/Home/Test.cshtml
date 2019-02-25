@@ -1,0 +1,20 @@
+﻿@{
+	ViewData["Title"] = "Test";
+}
+
+<link rel="stylesheet" type="text/css" href="css/game.css">
+
+<input type="button" value="Select Player 1" onclick="location.href = '@Url.Action("Player1", "Home")'"/>
+<input type="button" value="Select Player 2" onclick="location.href = '@Url.Action("Player2", "Home")'"/>
+<div id="wrapper">
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/spa.js"></script>
+<script src="js/data.js"></script>
+<script src="js/model.js"></script>
+<script src="js/reversi.js"></script>
+<script>
+	console.log("SPA.Data -> " + SPA.Data);
+	SPA.initModule($("#wrapper"));
+</script>
