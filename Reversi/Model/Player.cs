@@ -1,26 +1,35 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace Reversi.Model
 {
 	public class Player
 	{
-		private static int _idCounter;
+		public string Username { get; set; }
 
-		public int Id { get; }
-		public string Name { get; }
+		public string Color {
+			get {
+				var game = GameManager.GetGame(this);
+				if (game == null) return null;
+				return Array.IndexOf(game.Players, this) == 0 ? "white" : "black";
+			}
+		}
+
+		[JsonIgnore]
+		public string Token { get; set; }
 
 		[JsonIgnore]
 		public bool Refresh { get; set; }
 
-		public Player(string name)
+		public Player(string username, string token)
 		{
-			Id = _idCounter++;
-			Name = name;
+			Username = username;
+			Token = token;
 		}
 
 		public bool Equals(Player player)
 		{
-			return player.Id == Id;
+			return player.Username == Username;
 		}
 	}
 }

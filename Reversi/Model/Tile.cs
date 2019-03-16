@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace Reversi.Model
 {
@@ -9,7 +10,15 @@ namespace Reversi.Model
 		[JsonIgnore]
 		public Player Owner { get; set; }
 
-		public int OwnerId => Owner?.Id ?? -1;
+		public string Color {
+			get
+			{
+				if (Owner == null) return "hidden";
+				var game = GameManager.GetGame(Owner);
+				if (game == null) return null;
+				return Array.IndexOf(game.Players, Owner) == 0 ? "white" : "black";
+			}
+		}
 
 		public Tile(Vector location)
 		{

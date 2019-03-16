@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 using Reversi.Controller;
 
 namespace Reversi.Model
@@ -9,8 +10,8 @@ namespace Reversi.Model
 	{
 		public List<Tile> Tiles { get; } = new List<Tile>();
 
-		[NonSerialized]
-		public BoardController Controller;
+		[JsonIgnore]
+		public BoardController Controller { get; }
 
 		public Board(Player player1, Player player2)
 		{

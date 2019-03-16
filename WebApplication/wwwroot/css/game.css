@@ -14,6 +14,10 @@ body {
     height: 80px;
 }
 
+.ghost:hover {
+	background-color: #579642;
+}
+
 .row {
     width: 84px;
     display: inline-block;

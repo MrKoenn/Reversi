@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Reversi.Model;
 
 namespace Reversi.Controller
@@ -9,6 +10,8 @@ namespace Reversi.Controller
 
 		private int _turn;
 		public Player Turn => Players[_turn];
+
+		[JsonIgnore]
 		public Player[] Players { get; }
 
 		public BoardController(Player player1, Player player2, Board board)
@@ -70,6 +73,25 @@ namespace Reversi.Controller
 			}
 
 			return true;
+		}
+
+		public int[] GetScore()
+		{
+			var score = new int[Players.Length];
+			foreach (var tile in Board.Tiles)
+			{
+				if (tile.Owner == null) continue;
+
+				for (var i = 0; i < Players.Length; i++)
+				{
+					if (tile.Owner.Equals(Players[i]))
+					{
+						score[i]++;
+					}
+				}
+			}
+
+			return score;
 		}
 
 		public ICollection<Tile> RayCast(Vector origin, Vector direction, Player caster)

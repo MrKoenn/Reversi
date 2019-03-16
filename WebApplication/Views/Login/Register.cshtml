@@ -1,0 +1,26 @@
+﻿@model WebApplication.Models.RegisterFormModel
+
+@{
+    ViewData["Title"] = "Register";
+
+	var error = ViewData["Error"];
+}
+
+<h2>Register</h2>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		@using (Html.BeginForm())
+		{
+			@Html.ValidationSummary()
+			<p>Username: @Html.TextBoxFor(u => u.Username)</p>
+			<p>Password: @Html.PasswordFor(u => u.Password)</p>
+			<input type="submit" value="Register" />
+		}
+	</div>
+	@if (error != null)
+	{
+		<span id="error">@error</span>
+	}
+</div>
+

@@ -1,45 +1,51 @@
-﻿using System.Net.Http;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Internal;
 using Reversi;
 using Reversi.Model;
+using WebApplication.DAL;
 
 namespace WebApplication.Controllers
 {
-	[Route("api/[controller]")]
+	[Route("api/game")]
 	public class GameController : Controller
 	{
-		public static readonly Board Board = new Board(
-			PlayerManager.CreatePlayer(new Player("White")),
-			PlayerManager.CreatePlayer(new Player("Black"))
-		);
+		private readonly GameContext _context;
+
+		public GameController(GameContext context)
+		{
+			_context = context;
+		}
 
 		// GET: api/game/board
 		[HttpGet("board")]
 		public ActionResult GetBoard()
 		{
-			var player = GetPlayerFromCookie();
-			if (player != null)
-			{
-				player.Refresh = false;
-			}
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
 
-			return new OkObjectResult(Board);
+			player.Refresh = false;
+			Logger.Log($"<{player.Username}> GetBoard() => {game.Board}");
+			return new OkObjectResult(game.Board);
 		}
 
 		// GET: api/game/turn
 		[HttpGet("turn")]
-		public Player GetTurn()
+		public ActionResult GetTurn()
 		{
-			return Board.Controller.Turn;
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
+
+			//Logger.Log($"<{player.Username}> GetTurn() => {game.Board.Controller.Turn.Username}#{game.Board.Controller.Turn.Color}");
+			return new OkObjectResult(game.Players[game.Board.Controller.Turn]);
 		}
 
 		// GET: api/game/self
 		[HttpGet("self")]
 		public ActionResult GetSelf()
 		{
-			var player = GetPlayerFromCookie();
-			if (player == null) return new ForbidResult();
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
 
+			Logger.Log($"<{player.Username}> GetSelf() => {player.Color}");
 			return new OkObjectResult(player);
 		}
 
@@ -47,27 +53,75 @@ namespace WebApplication.Controllers
 		[HttpGet("refresh")]
 		public ActionResult GetNeedsRefresh()
 		{
-			var player = GetPlayerFromCookie();
-			if (player == null) return new ForbidResult();
+			if (!GetPlayer(out var player, Request, _context)) return new ForbidResult();
 
 			return new OkObjectResult(player.Refresh);
 		}
 
 		// POST: api/game/move
 		[HttpPost("move")]
-		public ActionResult MakeMove(HttpRequestMessage request, [FromForm] Vector tile)
+		public async Task<ActionResult> MakeMove([FromForm] Vector tile)
 		{
-			var player = GetPlayerFromCookie();
-			if (player == null) return new ForbidResult();
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
+			
+			var result = game.Board.Controller.MakeMove(game.Players.IndexOf(player), tile);
+			Logger.Log($"<{player.Username}> MakeMove() => {result}");
+			if (!result) return new OkObjectResult(false);
 
-			var result = Board.Controller.MakeMove(player, tile);
-			return new OkObjectResult(result);
+			foreach (var gamePlayer in game.Players)
+			{
+				gamePlayer.Refresh = true;
+			}
+
+			await GameManager.UpdateGame(game, _context);
+			return new OkObjectResult(true);
 		}
 
-		private Player GetPlayerFromCookie()
+		// GET: api/game/score
+		[HttpGet("score")]
+		public ActionResult GetScore()
 		{
-			if (!Request.Cookies.TryGetValue("PlayerId", out var value)) return null;
-			return int.TryParse(value, out var id) ? PlayerManager.GetPlayer(id) : null;
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
+
+			var score = game.Board.Controller.GetScore();
+			Logger.Log($"<{player.Username}> GetScore() => {string.Join(",", score)}");
+			return new OkObjectResult(score);
+		}
+
+		// GET: api/game/score
+		[HttpGet("moves")]
+		public ActionResult GetMoves()
+		{
+			if (!GetPlayerAndGame(out var player, out var game, Request, _context)) return new ForbidResult();
+
+			var moves = game.Board.Controller.GetPossibleMoves(game.Players.IndexOf(player));
+			Logger.Log($"<{player.Username}> GetMoves() => {string.Join(",", moves)}");
+			return new OkObjectResult(moves);
+		}
+
+		public static bool GetPlayer(out Player player, HttpRequest request, GameContext context)
+		{
+			player = null;
+
+			// Try to get the user from the cookie
+			var user = StateHelper.GetUserFromCookie(request);
+			if (user == null) return false;
+
+			// Check if we have a player that matches the user in memory
+			player = PlayerManager.GetOrCreatePlayer(user.Username);
+			return true;
+		}
+
+		public static bool GetPlayerAndGame(out Player player, out Game game, HttpRequest request, GameContext context)
+		{
+			if (!GetPlayer(out player, request, context))
+			{
+				game = null;
+				return false;
+			}
+
+			game = GameManager.GetGame(player, context);
+			return game != null;
 		}
 	}
 }

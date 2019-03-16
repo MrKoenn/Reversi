@@ -1,0 +1,24 @@
+﻿@using Reversi.Model
+@{
+	ViewData["Title"] = "Game List";
+}
+
+<h2>Game List</h2>
+<span>Welcome @(((Player) ViewData["Player"]).Username)</span>
+<hr/>
+
+@if (ViewData["message"] != null)
+{
+	<div id="message">@ViewData["message"]</div>
+}
+<a href="@Url.Action("CreateGame")">Click here to create a new game.</a>
+<span>Or join an existing one below</span>
+<ul>
+	@foreach (var game in (List<Game>) ViewData["Games"])
+	{
+		<li>
+			<a href="@Url.Action("JoinGame", game.Id)">@game.Players[0].Username</a>
+			<a href="@Url.Action("RemoveGame", game.Id)">Delete</a>
+		</li>
+	}
+</ul>
