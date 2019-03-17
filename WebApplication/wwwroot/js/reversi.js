@@ -56,6 +56,9 @@ SPA.Reversi = (function($) {
 			console.log("Done!");
 		});
 
+		let test = new Widget("Welcome to Reversi! To see the rules, please click <a href='http://www.flyordie.com/games/help/reversi/en/games_rules_reversi.html' target='_blank'>here</a>. Play fair and have fun!", "green");
+		test.show();
+
 		return true;
 	}
 
