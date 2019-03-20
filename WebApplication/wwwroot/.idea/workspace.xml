@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37e1e32a-9087-4785-acaa-d003845a2902" name="Default Changelist" comment="Added gulp and templating">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reversi/gameplay.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/handlebars-runtime-3/handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/board.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/misc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/widget.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.vs/Reversi/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/Reversi/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.vs/Reversi/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/Reversi/v15/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.vs/Reversi/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vs/Reversi/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
@@ -26,22 +27,13 @@
       <change beforePath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/netcoreapp2.1/WebApplication.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/koenw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/koenw.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wwwroot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wwwroot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/banner1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/banner2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/banner3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/features/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/features/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/reversi.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/features/reversi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/site.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/site.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/features/widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/game.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/site.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/features/reversi.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/features/reversi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,46 +47,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/reversi/gameplay.hbs">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="124">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/board.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/features/reversi.js">
+        <entry file="file://$PROJECT_DIR$/sass/widget.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="132">
+              <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+        <entry file="file://$PROJECT_DIR$/sass/misc.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/game.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="242">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -115,6 +98,9 @@
       <find>&quot;</find>
       <find>pos</find>
       <find>row</find>
+      <find>orange</find>
+      <find>pink</find>
+      <find>.tile</find>
     </findStrings>
     <replaceStrings>
       <replace>`</replace>
@@ -132,20 +118,23 @@
         <option value="$PROJECT_DIR$/js/widget.js" />
         <option value="$PROJECT_DIR$/js/reversi.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/templates/gameplay.hbs" />
         <option value="$PROJECT_DIR$/html/game.html" />
         <option value="$PROJECT_DIR$/templates/reversi/gameplay.hbs" />
-        <option value="$PROJECT_DIR$/css/game.css" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/css/board.css" />
         <option value="$PROJECT_DIR$/js/features/reversi.js" />
+        <option value="$PROJECT_DIR$/sass/board.scss" />
+        <option value="$PROJECT_DIR$/css/game.css" />
+        <option value="$PROJECT_DIR$/sass/misc.scss" />
+        <option value="$PROJECT_DIR$/sass/widget.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="192" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -181,6 +170,11 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="wwwroot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wwwroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -194,6 +188,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -235,7 +230,7 @@
       <workItem from="1551532663320" duration="600000" />
       <workItem from="1552657590651" duration="3132000" />
       <workItem from="1552829559862" duration="6562000" />
-      <workItem from="1553066676715" duration="8158000" />
+      <workItem from="1553066676715" duration="11183000" />
     </task>
     <task id="LOCAL-00001" summary="Added feedbackwidget">
       <created>1552836092224</created>
@@ -244,11 +239,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552836092225</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added gulp and templating">
+      <created>1553074854568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553074854568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27205000" />
+    <option name="totallyTimeSpent" value="30230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -266,7 +268,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3298731" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -278,7 +280,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added feedbackwidget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added feedbackwidget" />
+    <MESSAGE value="Added gulp and templating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gulp and templating" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/site.js">
@@ -374,20 +377,6 @@
     <entry file="file://$PROJECT_DIR$/images/banner2.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/game.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/reversi/gameplay.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -399,12 +388,57 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/board.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/features/reversi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        <state relative-caret-position="283">
+          <caret line="64" column="101" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/game.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/misc.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/widget.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -9,6 +9,7 @@ const browserSync = require('browser-sync').create();
 const order = require('gulp-order');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglifyjs');
+const sass = require('gulp-sass');
 
 const html = function () {
     return gulp.src('./html/**/*.html')
@@ -63,7 +64,20 @@ const templates = function(){
         .pipe(browserSync.stream());
 };
 
-gulp.task('serve', function() {
+const compileSass = function () {
+    return gulp.src('./sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
+};
+
+const watch = function() {
+    gulp.watch('sass/**/*.scss', gulp.series(compileSass));
+    gulp.watch("./css/**.css", gulp.series(css));
+    gulp.watch("./js/**/*.js", gulp.series(js));
+    gulp.watch("./templates/**/*.hbs", gulp.series(templates));
+};
+
+const serve = function() {
     browserSync.init({
         server: {
             baseDir: "./dist/",
@@ -71,10 +85,9 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch("./css/**.css", gulp.series(css));
-    gulp.watch("./js/**/*.js", gulp.series(js));
-    gulp.watch("./templates/**/*.hbs", gulp.series(templates));
-    gulp.watch("./dist/**/*.html").on('change', browserSync.reload);
-});
+    gulp.watch("./dist/**/*").on('change', browserSync.reload);
+};
 
-exports.build = gulp.parallel(html, css, js, vendor, templates);
+exports.watch = gulp.series(watch);
+exports.serve = gulp.parallel(watch, serve);
+exports.build = gulp.parallel(compileSass, html, css, js, vendor, templates);

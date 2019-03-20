@@ -62,7 +62,8 @@ SPA.Reversi = (function ($) {
                 const newTile = board["tiles"][i];
                 const location = newTile["location"];
                 const id = location["x"] + "," + location["y"];
-                $(`#${id.replace(",", "\\,")}-player`).attr("class", `tile player ${newTile["color"]}`);
+                const color = newTile["color"] === "hidden" ? "fadeOut" : `${newTile["color"]} fadeIn`;
+                $(`#${id.replace(",", "\\,")}-player`).attr("class", `tile player ${color}`);
             }
 
             SPA.Model.saveState(board);

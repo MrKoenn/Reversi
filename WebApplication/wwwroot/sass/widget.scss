@@ -1,0 +1,104 @@
+$red_widget_color: #c13a3a;
+$green_widget_color: #26af3b;
+
+.widget-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(5, 5, 5, 0.5);
+  animation: fadein 2s;
+  z-index: 1005;
+}
+
+%button {
+  background-color: transparent;
+  color: #2d2d2d;
+  float: right;
+}
+
+.widget {
+  width: 400px;
+  min-height: 200px;
+  background-color: lightgray;
+  box-shadow: -5px 5px 5px #2d2d2d;
+  border-radius: 10px;
+  z-index: 1010;
+  margin: 70px auto auto;
+  border: 2px solid #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.widget-header {
+  height: 20px;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.widget-body {
+  padding: 0 10px 10px;
+  font-family: sans-serif;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.widget-footer {
+  align-self: flex-end;
+  height: 30px;
+  flex-shrink: 0;
+  margin: 4px 4px 1px;
+}
+
+.widget-close {
+  @extend %button;
+  border: none;
+  font-size: 25px;
+  height: 20px;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+.widget-btn {
+  @extend %button;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+.widget-img {
+  float: left;
+  margin-top: -12px;
+  margin-right: 10px;
+}
+
+.green {
+  background-color: $green_widget_color;
+}
+
+.red {
+  background-color: $red_widget_color;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .widget {
+    width: 90vw;
+  }
+
+  .widget-img {
+    visibility: hidden;
+    position: absolute;
+    left: -1000px;
+  }
+}
