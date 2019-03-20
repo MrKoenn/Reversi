@@ -1,0 +1,22 @@
+{
+  "name": "reversi",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-order": "^1.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-wrap": "^0.14.0",
+    "handlebars": "^4.0.6"
+  }
+}

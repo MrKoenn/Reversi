@@ -1,8 +1,8 @@
 SPA.Model = (function ($) {
     const configMap = {};
 
-	let _tiles;
-	let _player;
+    let _tiles;
+    let _player;
 
     function _initModule() {
         return true;
@@ -15,7 +15,7 @@ SPA.Model = (function ($) {
     return {
         initModule: _initModule,
         saveState: _saveState,
-		tiles: () => _tiles,
+        tiles: () => _tiles,
         player: _player
     }
 })(jQuery);

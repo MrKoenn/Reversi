@@ -1,0 +1,17 @@
+<header>
+    <span class="status self" id="self"></span>
+    <span class="status turn" id="turn"></span>
+    <span class="status score" id="score"></span>
+</header>
+
+<div class="board" id="board">
+    {{#each rows}}
+        <div class="row" id="row-{{this.id}}">
+            {{#each this.tiles}}
+                <div class="tile" id="tile-{{this.id}}">
+                    <div class="tile player hidden" id="{{this.id}}-player"></div>
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+</div>

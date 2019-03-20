@@ -9,9 +9,9 @@ SPA.Data = (function ($) {
         movePath: "/move",
         selfPath: "/self",
         turnPath: "/turn",
-		refreshPath: "/refresh",
-		scorePath: "/score",
-		movesPath: "/moves"
+        refreshPath: "/refresh",
+        scorePath: "/score",
+        movesPath: "/moves"
     };
 
     function _initModule(environment) {
@@ -20,12 +20,12 @@ SPA.Data = (function ($) {
     }
 
     function _getBoard() {
-	    const path = configMap.endpoints[configMap.environment] + configMap.boardPath;
+        const path = configMap.endpoints[configMap.environment] + configMap.boardPath;
         return _simpleGet(path);
     }
 
     function _makeMove(x, y) {
-	    const path = configMap.endpoints[configMap.environment] + configMap.movePath;
+        const path = configMap.endpoints[configMap.environment] + configMap.movePath;
         const data = {
             X: x,
             Y: y
@@ -41,29 +41,29 @@ SPA.Data = (function ($) {
     }
 
     function _getSelfInfo() {
-	    const path = configMap.endpoints[configMap.environment] + configMap.selfPath;
+        const path = configMap.endpoints[configMap.environment] + configMap.selfPath;
         return _simpleGet(path);
     }
 
     function _getTurn() {
-	    const path = configMap.endpoints[configMap.environment] + configMap.turnPath;
+        const path = configMap.endpoints[configMap.environment] + configMap.turnPath;
         return _simpleGet(path);
     }
 
     function _needsRefresh() {
-	    const path = configMap.endpoints[configMap.environment] + configMap.refreshPath;
+        const path = configMap.endpoints[configMap.environment] + configMap.refreshPath;
         return _simpleGet(path);
-	}
+    }
 
-	function _getScore() {
-		const path = configMap.endpoints[configMap.environment] + configMap.scorePath;
-		return _simpleGet(path);
-	}
+    function _getScore() {
+        const path = configMap.endpoints[configMap.environment] + configMap.scorePath;
+        return _simpleGet(path);
+    }
 
-	function _getMoves() {
-		const path = configMap.endpoints[configMap.environment] + configMap.movesPath;
-		return _simpleGet(path);
-	}
+    function _getMoves() {
+        const path = configMap.endpoints[configMap.environment] + configMap.movesPath;
+        return _simpleGet(path);
+    }
 
     function _simpleGet(path) {
         const promise = new Promise((resolve, reject) => {
@@ -81,9 +81,9 @@ SPA.Data = (function ($) {
         getBoard: _getBoard,
         makeMove: _makeMove,
         getSelfInfo: _getSelfInfo,
-		getTurn: _getTurn,
-		getScore: _getScore,
-		needsRefresh: _needsRefresh,
-		getMoves: _getMoves
+        getTurn: _getTurn,
+        getScore: _getScore,
+        needsRefresh: _needsRefresh,
+        getMoves: _getMoves
     }
 })(jQuery);
